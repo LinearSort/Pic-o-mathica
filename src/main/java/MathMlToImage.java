@@ -1,3 +1,4 @@
+package main.java;
 import java.io.File;
 import java.io.IOException;
 
@@ -12,8 +13,8 @@ public class MathMlToImage {
 	    Converter converter = Converter.getInstance();
 	    String workDir = System.getProperty("user.dir");
 	    try {
-			converter.convert(new File(workDir + "/src/main/resources/input/integral.xml"),
-			    new File(workDir + "/src/main/resources/output/integral.jpg"), "image/jpeg");
+			converter.convert(new File(workDir + "/src/main/resources/input/matrix.xml"),
+			    new File(workDir + "/src/main/resources/output/matrix.jpg"), "image/jpeg");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
