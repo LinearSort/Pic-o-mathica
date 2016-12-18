@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<queryresult success='true'
+    error='false'
+    numpods='2'
+    datatypes=''
+    timedout=''
+    timedoutpods=''
+    timing='1.577'
+    parsetiming='0.3'
+    parsetimedout='false'
+    recalculate=''
+    id='MSPa4631gbi15ef2c6dafed000010baahd3cbhhd48h'
+    host='http://www4c.wolframalpha.com'
+    server='58'
+    related='http://www4c.wolframalpha.com/api/v2/relatedQueries.jsp?id=MSPa4641gbi15ef2c6dafed0000490ed34c7a657i5i&amp;redisFailed=true&amp;s=58'
+    version='2.6'>
+ <pod title='Indefinite integral'
+     scanner='Integral'
+     id='IndefiniteIntegral'
+     position='100'
+     error='false'
+     numsubpods='1'
+     primary='true'>
+  <subpod title=''>
+   <img src='http://www4c.wolframalpha.com/Calculate/MSP/MSP4651gbi15ef2c6dafed00006aiegaciiecb5ad0?MSPStoreType=image/gif&amp;s=58'
+       alt=' integral 1/x dx = log(x) + constant'
+       title=' integral 1/x dx = log(x) + constant'
+       width='182'
+       height='36' />
+   <plaintext> integral 1/x dx = log(x) + constant</plaintext>
+  </subpod>
+  <states count='1'>
+   <state name='Step-by-step solution'
+       input='IndefiniteIntegral__Step-by-step solution' />
+  </states>
+  <infos count='1'>
+   <info text='log(x) is the natural logarithm'>
+    <img src='http://www4c.wolframalpha.com/Calculate/MSP/MSP4661gbi15ef2c6dafed00002d4ge6icghi66eh6?MSPStoreType=image/gif&amp;s=58'
+        alt='log(x) is the natural logarithm'
+        title='log(x) is the natural logarithm'
+        width='198'
+        height='18' />
+    <link url='http://reference.wolfram.com/mathematica/ref/Log.html'
+        text='Documentation'
+        title='Mathematica' />
+    <link url='http://functions.wolfram.com/ElementaryFunctions/Log'
+        text='Properties'
+        title='Wolfram Functions Site' />
+    <link url='http://mathworld.wolfram.com/NaturalLogarithm.html'
+        text='Definition'
+        title='MathWorld' />
+   </info>
+  </infos>
+ </pod>
+ <pod title='Plots of the integral'
+     scanner='Integral'
+     id='Plot'
+     position='200'
+     error='false'
+     numsubpods='2'>
+  <subpod title=''>
+   <img src='http://www4c.wolframalpha.com/Calculate/MSP/MSP4671gbi15ef2c6dafed00000ei76d1dfi6bae5g?MSPStoreType=image/gif&amp;s=58'
+       alt=''
+       title=''
+       width='334'
+       height='129' />
+   <plaintext></plaintext>
+   <states count='1'>
+    <statelist count='2'
+        value='Complex-valued plot'
+        delimiters=''>
+     <state name='Complex-valued plot'
+         input='Plot__1_Complex-valued plot' />
+     <state name='Real-valued plot'
+         input='Plot__1_Real-valued plot' />
+    </statelist>
+   </states>
+  </subpod>
+  <subpod title=''>
+   <img src='http://www4c.wolframalpha.com/Calculate/MSP/MSP4681gbi15ef2c6dafed00002c2900eb31938a1g?MSPStoreType=image/gif&amp;s=58'
+       alt=''
+       title=''
+       width='334'
+       height='134' />
+   <plaintext></plaintext>
+   <states count='1'>
+    <statelist count='2'
+        value='Complex-valued plot'
+        delimiters=''>
+     <state name='Complex-valued plot'
+         input='Plot__2_Complex-valued plot' />
+     <state name='Real-valued plot'
+         input='Plot__2_Real-valued plot' />
+    </statelist>
+   </states>
+  </subpod>
+ </pod>
+</queryresult>
