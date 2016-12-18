@@ -1,1 +1,2 @@
+\int \int \int (u+v+w) \,du\,dv\,dw
 \int \frac{dx}{x}
