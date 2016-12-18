@@ -1,8 +1,6 @@
 *.class
 .idea/
-.classpath
-.project
-.settings/
+
 
 
 # Mobile Tools for Java (J2ME)
