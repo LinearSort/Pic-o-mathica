@@ -1,10 +1,9 @@
 
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 import com.wolfram.jlink.*;
+import martin.WolframAlphaController;
 
 public class SampleProgram {
 
@@ -58,7 +57,7 @@ public class SampleProgram {
 					}
 					replaced = escaped;
 				}
-				System.out.println(replaced);
+//				System.out.println(replaced);
 				String strResult = ml.evaluateToInputForm("Solve[ToExpression[\"" 
 				+ replaced + "\",TeXForm]]", 0);
 				
@@ -67,7 +66,40 @@ public class SampleProgram {
 					strResult = strResult.replace("Solve[", "");
 					strResult = strResult.replace(strResult.substring(strResult.length()-1), "");
 				}
+
 				System.out.println(strResult);
+
+				try{
+					FileWriter fw = new FileWriter(System.getProperty("user.dir") + "/src/main/resources/results.html", true);
+					BufferedWriter bw = new BufferedWriter(fw);
+					PrintWriter writer = new PrintWriter(bw);
+
+
+					writer.println("=");
+					writer.println(strResult);
+
+					writer.println("<br>");
+
+					writer.println("</div>");
+
+
+					writer.println("<div style=\"display: inline;\" lang=\"latex\">");
+					writer.println(argv[0]);
+
+					writer.println("</div>=");
+
+
+
+
+//					writer.println("</body>");
+//
+//					writer.println("<html>");
+
+					writer.close();
+				} catch (IOException e) {
+					// do something
+				}
+
 			}
 
 			br.close();
@@ -77,5 +109,9 @@ public class SampleProgram {
 		} finally {
 			ml.close();
 		}
+
+		System.out.println();
+
+		WolframAlphaController.main(new String[]{"a","b","c"});
 	}
 }

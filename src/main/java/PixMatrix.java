@@ -23,7 +23,7 @@ public class PixMatrix {
 
 	public PixMatrix() {
 		try {
-			BufferedImage image = ImageIO.read(new File(System.getProperty("user.dir") + "/src/main/resources/images/1.jpg"));
+			BufferedImage image = ImageIO.read(new File(System.getProperty("user.dir") + "/src/main/resources/images/5.jpg"));
 
 			this.width = image.getWidth();
 			this.height = image.getHeight();

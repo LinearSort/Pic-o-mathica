@@ -144,6 +144,26 @@ public class SeshatController {
         System.out.println(last);
 
         try{
+            PrintWriter writer = new PrintWriter(System.getProperty("user.dir") + "/src/main/resources/results.html", "UTF-8");
+            writer.println("<html>");
+            writer.println("<head>");
+            writer.println("<script type=\"text/javascript\" src=\"http://latex.codecogs.com/latexit.js\"></script>");
+            writer.println("</head>");
+            writer.println("<body>");
+            writer.println("<div lang=\"latex\">");
+
+            writer.println(last);
+
+//					writer.println("</body>");
+//
+//					writer.println("<html>");
+
+            writer.close();
+        } catch (IOException e) {
+            // do something
+        }
+
+        try{
             PrintWriter writer = new PrintWriter(System.getProperty("user.dir") + "/src/main/resources/the-file-name.txt", "UTF-8");
             writer.println(last);
             writer.close();
@@ -151,7 +171,11 @@ public class SeshatController {
             // do something
         }
 
-        SampleProgram.main(new String[]{"a","b","c"});
+        System.out.println();
+
+        SampleProgram.main(new String[]{last});
+
+//
 
 
         // read any errors from the attempted command
