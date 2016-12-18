@@ -1,7 +1,4 @@
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -146,7 +143,13 @@ public class SeshatController {
         }
         System.out.println(last);
 
-
+        try{
+            PrintWriter writer = new PrintWriter(System.getProperty("user.dir") + "/src/main/resources/the-file-name.txt", "UTF-8");
+            writer.println(last);
+            writer.close();
+        } catch (IOException e) {
+            // do something
+        }
 
         // read any errors from the attempted command
 //        System.out.println("Here is the standard error of the command (if any):\n");
