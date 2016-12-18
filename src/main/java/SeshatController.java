@@ -151,6 +151,9 @@ public class SeshatController {
             // do something
         }
 
+        SampleProgram.main(new String[]{"a","b","c"});
+
+
         // read any errors from the attempted command
 //        System.out.println("Here is the standard error of the command (if any):\n");
 //        while ((s = stdError.readLine()) != null) {
