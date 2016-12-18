@@ -1,6 +1,10 @@
 *.class
 .idea/
-
+.classpath
+.project
+.settings/
+src/main/resources/seshat/
+seshat/
 
 
 # Mobile Tools for Java (J2ME)
