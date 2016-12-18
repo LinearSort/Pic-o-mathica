@@ -1,7 +1,4 @@
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -131,21 +128,60 @@ public class SeshatController {
         Process p = pb.start();
 
         BufferedReader stdInput = new BufferedReader(new
-                    InputStreamReader(p.getInputStream()));
+                InputStreamReader(p.getInputStream()));
 
-            BufferedReader stdError = new BufferedReader(new
-                    InputStreamReader(p.getErrorStream()));
+        BufferedReader stdError = new BufferedReader(new
+                InputStreamReader(p.getErrorStream()));
 
-            // read the output from the command
-            System.out.println("Here is the standard output of the command:\n");
-            while ((s = stdInput.readLine()) != null) {
-                System.out.println(s);
-            }
+        String last = null;
+        // read the output from the command
+//        System.out.println("Here is the standard output of the command:\n");
+        while ((s = stdInput.readLine()) != null) {
+//            System.out.println(s);
 
-            // read any errors from the attempted command
-            System.out.println("Here is the standard error of the command (if any):\n");
-            while ((s = stdError.readLine()) != null) {
-                System.out.println(s);
-            }
+            last = s;
+        }
+        System.out.println(last);
+
+        try{
+            PrintWriter writer = new PrintWriter(System.getProperty("user.dir") + "/src/main/resources/results.html", "UTF-8");
+            writer.println("<html>");
+            writer.println("<head>");
+            writer.println("<script type=\"text/javascript\" src=\"http://latex.codecogs.com/latexit.js\"></script>");
+            writer.println("</head>");
+            writer.println("<body>");
+            writer.println("<div lang=\"latex\">");
+
+            writer.println(last);
+
+//					writer.println("</body>");
+//
+//					writer.println("<html>");
+
+            writer.close();
+        } catch (IOException e) {
+            // do something
+        }
+
+        try{
+            PrintWriter writer = new PrintWriter(System.getProperty("user.dir") + "/src/main/resources/the-file-name.txt", "UTF-8");
+            writer.println(last);
+            writer.close();
+        } catch (IOException e) {
+            // do something
+        }
+
+        System.out.println();
+
+        SampleProgram.main(new String[]{last});
+
+//
+
+
+        // read any errors from the attempted command
+//        System.out.println("Here is the standard error of the command (if any):\n");
+//        while ((s = stdError.readLine()) != null) {
+//            System.out.println(s);
+//        }
     }
 }
