@@ -1,5 +1,3 @@
-package fromPictureToLaTeX;
-
 public class Pair {
 
 	public int x;

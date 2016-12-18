@@ -1,6 +1,7 @@
-package fromPictureToLaTeX;
+import com.sun.xml.internal.fastinfoset.util.StringArray;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.LinkedList;
@@ -118,12 +119,12 @@ public class Main {
 
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 
 		PixMatrix matrix = new PixMatrix();
 		PrintWriter writer = null;
 		try {
-			writer = new PrintWriter("/home/geshh/code/seshat/SampleMathExps/boolMatrix.txt", "UTF-8");
+			writer = new PrintWriter(System.getProperty("user.dir") + "/seshat/SampleMathExps/boolMatrix.txt", "UTF-8");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -155,7 +156,7 @@ public class Main {
 		}
 
 		try {
-			writer = new PrintWriter("/home/geshh/code/seshat/SampleMathExps/strokeMatrix.inkml", "UTF-8");
+			writer = new PrintWriter(System.getProperty("user.dir") + "/seshat/SampleMathExps/strokeMatrix.inkml", "UTF-8");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -182,6 +183,9 @@ public class Main {
 		writer.println("</ink>");
 		writer.flush();
 		writer.close();
+
+		SeshatController.main(new String[]{"a","b","c"});
+
 
 	}
 }

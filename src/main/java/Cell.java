@@ -1,5 +1,3 @@
-package fromPictureToLaTeX;
-
 public class Cell {
 
 	private int red;

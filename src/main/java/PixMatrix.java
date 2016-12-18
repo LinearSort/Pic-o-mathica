@@ -1,5 +1,3 @@
-package fromPictureToLaTeX;
-
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -25,7 +23,7 @@ public class PixMatrix {
 
 	public PixMatrix() {
 		try {
-			BufferedImage image = ImageIO.read(new File("/home/geshh/Desktop/try7.jpg"));
+			BufferedImage image = ImageIO.read(new File(System.getProperty("user.dir") + "/src/main/resources/images/1.jpg"));
 
 			this.width = image.getWidth();
 			this.height = image.getHeight();
