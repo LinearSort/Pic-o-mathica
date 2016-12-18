@@ -3,6 +3,7 @@
 .classpath
 .project
 .settings/
+src/main/resources/seshat/
 
 
 # Mobile Tools for Java (J2ME)
